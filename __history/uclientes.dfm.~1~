@@ -1,0 +1,382 @@
+object fclientes: Tfclientes
+  Left = 460
+  Top = 62
+  Caption = 'CADASTRO DE CLIENTES'
+  ClientHeight = 779
+  ClientWidth = 922
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 9
+    Top = 8
+    Width = 905
+    Height = 763
+    BevelInner = bvLowered
+    BevelKind = bkFlat
+    BevelWidth = 6
+    BorderStyle = bsSingle
+    Color = 16113368
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 64
+      Top = 32
+      Width = 48
+      Height = 16
+      Caption = 'C'#243'digo:'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 64
+      Top = 72
+      Width = 118
+      Height = 16
+      Caption = 'Data do cadastro:'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 64
+      Top = 112
+      Width = 107
+      Height = 16
+      Caption = 'Nome do cliente:'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 64
+      Top = 152
+      Width = 65
+      Height = 16
+      Caption = 'Endere'#231'o:'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 64
+      Top = 192
+      Width = 44
+      Height = 16
+      Caption = 'Bairro:'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 64
+      Top = 232
+      Width = 48
+      Height = 16
+      Caption = 'Cidade:'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 64
+      Top = 272
+      Width = 49
+      Height = 16
+      Caption = 'Estado:'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 64
+      Top = 312
+      Width = 134
+      Height = 16
+      Caption = 'Data de nascimento:'
+      FocusControl = DBEdit8
+    end
+    object Label9: TLabel
+      Left = 64
+      Top = 352
+      Width = 43
+      Height = 16
+      Caption = 'E-mail:'
+      FocusControl = DBEdit9
+    end
+    object Label10: TLabel
+      Left = 64
+      Top = 392
+      Width = 39
+      Height = 16
+      Caption = 'C P F :'
+      FocusControl = DBEdit10
+    end
+    object DBEdit1: TDBEdit
+      Left = 64
+      Top = 48
+      Width = 134
+      Height = 24
+      TabStop = False
+      DataField = 'CODCLI'
+      DataSource = dsclientes
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 64
+      Top = 88
+      Width = 134
+      Height = 24
+      DataField = 'CADCLI'
+      DataSource = dsclientes
+      MaxLength = 10
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 64
+      Top = 128
+      Width = 784
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'NOMCLI'
+      DataSource = dsclientes
+      TabOrder = 2
+      OnChange = DBEdit3Change
+    end
+    object DBEdit4: TDBEdit
+      Left = 64
+      Top = 168
+      Width = 784
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'ENDCLI'
+      DataSource = dsclientes
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 64
+      Top = 208
+      Width = 784
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'BAICLI'
+      DataSource = dsclientes
+      TabOrder = 4
+    end
+    object DBEdit6: TDBEdit
+      Left = 64
+      Top = 248
+      Width = 784
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'CIDCLI'
+      DataSource = dsclientes
+      TabOrder = 5
+    end
+    object DBEdit7: TDBEdit
+      Left = 64
+      Top = 288
+      Width = 44
+      Height = 24
+      CharCase = ecUpperCase
+      DataField = 'ESTCLI'
+      DataSource = dsclientes
+      TabOrder = 6
+    end
+    object DBEdit8: TDBEdit
+      Left = 64
+      Top = 328
+      Width = 134
+      Height = 24
+      DataField = 'DATCLI'
+      DataSource = dsclientes
+      MaxLength = 10
+      TabOrder = 7
+    end
+    object DBEdit9: TDBEdit
+      Left = 64
+      Top = 368
+      Width = 784
+      Height = 24
+      CharCase = ecLowerCase
+      DataField = 'EMACLI'
+      DataSource = dsclientes
+      TabOrder = 8
+    end
+    object DBEdit10: TDBEdit
+      Left = 64
+      Top = 414
+      Width = 217
+      Height = 24
+      DataField = 'CPFCLI'
+      DataSource = dsclientes
+      MaxLength = 14
+      TabOrder = 9
+    end
+    object Panel2: TPanel
+      Left = 64
+      Top = 448
+      Width = 784
+      Height = 41
+      Color = 14281983
+      ParentBackground = False
+      TabOrder = 10
+      object btgravar: TBitBtn
+        Left = 8
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Gravar'
+        TabOrder = 0
+        OnClick = btgravarClick
+      end
+      object btincluir: TBitBtn
+        Left = 122
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Incluir'
+        TabOrder = 1
+        OnClick = btincluirClick
+      end
+      object btcancelar: TBitBtn
+        Left = 237
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Cancelar'
+        TabOrder = 2
+        OnClick = btcancelarClick
+      end
+      object BitBtn4: TBitBtn
+        Left = 352
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Consultar'
+        TabOrder = 3
+        OnClick = BitBtn4Click
+      end
+      object BitBtn5: TBitBtn
+        Left = 466
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Alterar'
+        TabOrder = 4
+        OnClick = BitBtn5Click
+      end
+      object BitBtn6: TBitBtn
+        Left = 581
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = '&Excluir'
+        TabOrder = 5
+        OnClick = BitBtn6Click
+      end
+      object btfechar: TBitBtn
+        Left = 696
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'Fechar'
+        TabOrder = 6
+        OnClick = btfecharClick
+      end
+    end
+    object DBGrid1: TDBGrid
+      Left = 64
+      Top = 512
+      Width = 784
+      Height = 209
+      DataSource = dsclientes
+      TabOrder = 11
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -13
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = [fsBold]
+    end
+  end
+  object tbclientes: TFDTable
+    Active = True
+    IndexFieldNames = 'CODCLI'
+    Connection = dm.FDConnection1
+    UpdateOptions.AssignedValues = [uvEDelete, uvUpdateMode, uvGeneratorName, uvUpdateNonBaseFields, uvAutoCommitUpdates]
+    UpdateOptions.UpdateTableName = 'CLIENTES'
+    UpdateOptions.KeyFields = 'CODCLI'
+    TableName = 'CLIENTES'
+    Left = 392
+    Top = 72
+    object tbclientesCODCLI: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'CODCLI'
+      Origin = 'CODCLI'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object tbclientesCADCLI: TDateField
+      FieldName = 'CADCLI'
+      Origin = 'CADCLI'
+      Required = True
+      EditMask = '99/99/9999'
+    end
+    object tbclientesNOMCLI: TStringField
+      FieldName = 'NOMCLI'
+      Origin = 'NOMCLI'
+      Required = True
+      Size = 60
+    end
+    object tbclientesENDCLI: TStringField
+      FieldName = 'ENDCLI'
+      Origin = 'ENDCLI'
+      Required = True
+      Size = 60
+    end
+    object tbclientesBAICLI: TStringField
+      FieldName = 'BAICLI'
+      Origin = 'BAICLI'
+      Required = True
+      Size = 60
+    end
+    object tbclientesCIDCLI: TStringField
+      FieldName = 'CIDCLI'
+      Origin = 'CIDCLI'
+      Required = True
+      Size = 60
+    end
+    object tbclientesESTCLI: TStringField
+      FieldName = 'ESTCLI'
+      Origin = 'ESTCLI'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object tbclientesDATCLI: TDateField
+      FieldName = 'DATCLI'
+      Origin = 'DATCLI'
+      Required = True
+      EditMask = '99/99/9999'
+    end
+    object tbclientesEMACLI: TStringField
+      FieldName = 'EMACLI'
+      Origin = 'EMACLI'
+      Required = True
+      Size = 60
+    end
+    object tbclientesCPFCLI: TStringField
+      FieldName = 'CPFCLI'
+      Origin = 'CPFCLI'
+      Required = True
+      EditMask = '999-999-999-99'
+    end
+  end
+  object dsclientes: TDataSource
+    DataSet = tbclientes
+    Left = 468
+    Top = 72
+  end
+end
